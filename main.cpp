@@ -42,13 +42,13 @@ int main(int, char **)
 // My reverse lexicographically sort BEGIN
 		//std::sort with my self-made comparator (lambda)
 
-		std::sort( ip_pool.begin(), ip_pool.end(),	[](std::vector<std::vector<std::string>>::const_iterator& frst, std::vector<std::vector<std::string>>::const_iterator& scnd) {
+		std::sort( ip_pool.begin(), ip_pool.end(),	[](auto& frst, auto& scnd) {
 			
 			bool ret_res { false };
 			vector_const_iter iter_frst {};
 			vector_const_iter iter_scnd {};
 
-			for (iter_frst = frst.begin(), iter_scnd = scnd.begin(); iter_frst != frst.end(), iter_scnd != scnd.end(); )
+			for (iter_frst = frst.cbegin(), iter_scnd = scnd.cbegin(); iter_frst != frst.cend(), iter_scnd != scnd.cend(); )
 			{
 				if (std::stoi(*iter_frst) == std::stoi(*iter_scnd)) { ++iter_frst; ++iter_scnd; }
 				   
