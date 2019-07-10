@@ -27,7 +27,7 @@ std::vector<std::string> split(std::string&& str, char d)
 	
 }
 
-int main(int argc, char const* argv[])
+int main(int, char **)
 {
 	try
 	{
