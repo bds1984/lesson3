@@ -58,7 +58,6 @@ int main(int, char **)
 			}
 			return ret_res;
 			});
-
 //My reverse lexicographically sort END
 
 //filters  BEGIN
