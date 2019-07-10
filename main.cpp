@@ -48,7 +48,7 @@ int main(int, char **)
 			vector_const_iter iter_frst {};
 			vector_const_iter iter_scnd {};
 
-			for (iter_frst = frst.cbegin(), iter_scnd = scnd.cbegin(); iter_frst != frst.cend(), iter_scnd != scnd.cend(); )
+			for (iter_frst = frst.begin(), iter_scnd = scnd.begin(); iter_frst != frst.end(), iter_scnd != scnd.end(); )
 			{
 				if (std::stoi(*iter_frst) == std::stoi(*iter_scnd)) { ++iter_frst; ++iter_scnd; }
 				   
