@@ -42,7 +42,7 @@ int main(int, char **)
 // My reverse lexicographically sort BEGIN
 		//std::sort with my self-made comparator (lambda)
 
-		std::sort( ip_pool.begin(), ip_pool.end(),	[](auto&& frst, auto&& scnd) {
+		std::sort( ip_pool.begin(), ip_pool.end(),	[](std::vector<std::vector<std::string>>::const_iterator& frst, std::vector<std::vector<std::string>>::const_iterator& scnd) {
 			
 			bool ret_res { false };
 			vector_const_iter iter_frst {};
